@@ -1,0 +1,12 @@
+/* GLOBAL */
+@import url("./global/reset.css");
+@import url("./global/variables.css");
+
+/*BACKGROUND*/
+@import url("./global/background.css");
+
+/*TYPOGRAPH*/
+@import url("./components/typography.css");
+
+/*SIDEBAR*/
+@import url("./components/sidebar.css");

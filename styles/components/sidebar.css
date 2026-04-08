@@ -1,0 +1,46 @@
+.sidebar {
+    position: fixed;
+    bottom: 60px;
+    left: 60px;
+
+    font-family: var(--font-title);
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin: 14px 0;
+    position: relative;
+}
+
+/* bolinha vermelha */
+.sidebar li::before {
+    content: "•";
+    color: var(--accent-red);
+    margin-right: 8px;
+    position: absolute;
+    left: -15px;
+    font-size: 28px;
+}
+
+/* links */
+.sidebar a {
+    text-decoration: none;
+    color: var(--secondary-text);
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+/* hover */
+.sidebar a:hover {
+    color: var(--main-text);
+}
+
+/* ativo */
+.sidebar a.active {
+    color: var(--main-text);
+    text-decoration: underline;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Resident Evil Dark Protocol</title>
+</head>
+<body>
+    <canvas id="noise"></canvas>
+    <h1>Resident Evil Dark Protocol</h1>
+
+    <nav class="sidebar">
+    <ul>
+        <li><a href="#home" data-page="home">Início</a></li>
+        <li><a href="#trailer" data-page="trailer">Trailer</a></li>
+        <li><a href="#sobre" data-page="sobre">Sobre</a></li>
+        <li><a href="#gameplay" data-page="gameplay">Gameplay</a></li>
+        <li><a href="#baixar" data-page="baixar">Baixar</a></li>
+    </ul>
+</nav>
+
+    <script src="/scripts/effects/noise.js"></script>
+    <script type="module">
+    import { initSidebar } from '/scripts/components/sidebar.js';
+    initSidebar();
+</script>
+</body>
+</html>
