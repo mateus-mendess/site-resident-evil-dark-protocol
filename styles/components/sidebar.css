@@ -1,7 +1,7 @@
 .sidebar {
     position: fixed;
     bottom: 60px;
-    left: 60px;
+    left: 6vw;
 
     font-family: var(--font-title);
     z-index: 1000;

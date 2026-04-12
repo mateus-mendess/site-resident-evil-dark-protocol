@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Special Elite';
+}
+
+body {
+  background: #0a0a0a;
+  color: #fff;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.top-left {
+  position: absolute;
+  top: 60px;
+  left: 85px;
+  font-size: 30px;
+  opacity: 0.7;
+  z-index: 3;
+  color: white;
+}
+
+.menu {
+  position: absolute;
+  left: 80px;
+  top: 30%;
+  z-index: 3;
+}
+
+.menu h1 {
+  font-size: 200px;
+  letter-spacing: 6px;
+}
+
+.menu h1 span {
+  color: red;
+}
+
+.menu h2 {
+  font-size: 90px;
+  text-decoration: line-through;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+.menu ul {
+  list-style: none;
+  margin-top: 30px;
+  font-family: "", monospace;
+  z-index: 3;
+}
+
+.menu li {
+  margin: 12px 0;
+  font-size: 30px;
+  opacity: 0.6;
+  padding-left: 20px;
+  position: relative;
+}
+.menu a {
+  text-decoration: none;
+  color: inherit; 
+  display: block;
+}
+.menu li:hover {
+  opacity: 1;
+  transform: translateX(5px);
+}
+.menu li.active a {
+  text-decoration: underline;
+  color: #fff;
+}
+.menu li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: red;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  border-radius: 50%;
+}
+
+.menu li.active {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.center-image {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-30%, -50%);
+  width: 100%;
+  z-index: 0; 
+}
+
+.center-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+
+  filter: grayscale(100%) contrast(120%);
+}
+
+.right-panel {
+  position: absolute;
+  top: 120px;
+  right: 120px;
+  width: 260px;
+  z-index: 2;
+}
+
+.game-box {
+  border: 1px solid #555;
+  width: 11.5vw;          
+  aspect-ratio: 1 / 1; 
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: -13vh; 
+
+}
+
+.game-box p {
+  font-size: 3.5vh;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.game-box h3 {
+  font-size: 2.3vh;
+  white-space: nowrap;
+  margin-left: -3.2vh;
+}
+
+.game-box span {
+  font-size: 2vh;
+  white-space: nowrap;
+  margin-left: -10px;
+}
+
+.description {
+  font-size: 25px;
+  line-height: 1.5;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #ddd;
+  border: none;
+  padding: 20px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+
+}

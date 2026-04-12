@@ -6,6 +6,12 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Oswald';
+    src: url('../../assets/fonts/oswald/Oswald-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
 :root {
     --font-title: 'Special Elite', monospace;
     --bg-color: #0c0c0c;

@@ -2,7 +2,7 @@ body {
     background-color: var(--bg-color);
     background-image: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('../../assets/images/background.png'); /* AJUSTA AQUI */
+        url('../../assets/images/background.png');
 
     background-size: cover;
     background-position: center;
