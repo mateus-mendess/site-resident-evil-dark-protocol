@@ -2,56 +2,96 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Dark Protocol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resident Evil - Dark Protocol</title>
+
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/pages/home.css">
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
+  <canvas id="noise"></canvas>
 
-<div class="container">
+  <div class="main-wrapper">
 
-  <div class="top-left">
-    <p><img src="../assets/images/mundo.png" class="icon"> PT-BR</p>
-    <p>MGI3 UNIT INC</p>
+    <div class="decorative-line"></div>
+
+    <!-- BADGE (REUTILIZÁVEL) -->
+    <aside class="game-badge">
+      <div class="badge-game">GAME</div>
+      <div class="badge-title">RESIDENT EVIL</div>
+      <div class="badge-subtitle">DARK PROTOCOL</div>
+    </aside>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="top-left"> 
+        <p><img src="../assets/images/mundo.png" class="icon"> PT-BR</p> 
+        <p>MGI3 UNIT INC.</p> 
+      </div>
+
+      <h1 class="page-title">
+        <span>DARK</span>
+        <span>PROTOCOL</span>
+      </h1>
+    </header>
+
+    <main class="content-grid">
+
+      <!-- SIDEBAR (COMPONENTE) -->
+      <nav class="sidebar">
+        <ul>
+          <li><a href="index.html" data-page="home">Início</a></li>
+          <li><a href="trailer.html" data-page="trailer">Trailer</a></li>
+          <li><a href="sobre.html" data-page="sobre">Sobre</a></li>
+          <li><a href="gameplay.html" data-page="gameplay">Gameplay</a></li>
+          <li><a href="download.html" data-page="baixar">Baixar</a></li>
+        </ul>
+      </nav>
+
+      <!-- IMAGEM PRINCIPAL -->
+      <section class="hero">
+        <img src="../assets/images/imagem_tela_1.png" alt="Cena do jogo">
+      </section>
+
+      <!-- TEXTO -->
+      <section class="home-info">
+        <p class="description">
+          1944. Enquanto os Aliados avançam pela Europa ocupada, rumores de uma "arma milagrosa" 
+          alemã levam a inteligência britânica a enviar um especialista para as profundezas da Baviera. 
+          Em um vilarejo isolado sob o controle de uma divisão dissidente da SS, experimentos 
+          com um organismo ancestral desenterrado de minas de sal estão transformando soldados e civis em hospedeiros degenerados.
+        </p>
+
+        <div class="btn-container" id="nextButton"></div>
+      </section>
+
+    </main>
   </div>
 
-  <div class="menu">
-    <h1><span>D</span>ARK</h1>
-    <h2>PROTOCOL</h2>
+  <!-- Sidebar -->
+  <script type="module">
+    import { initSidebar } from '/scripts/components/sidebar.js';
+    initSidebar();
+  </script>
 
-    <ul>
-      <li class="active"><a href="index.html">Início</a></li>
-      <li><a href="trailer.html">Trailer</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="gameplay.html">Gameplay</a></li>
-      <li><a href="download.html">Baixar</a></li>
-    </ul>
-  </div>
+  <!-- Button -->
+  <script type="module">
+    import { createButton } from '../scripts/components/button.js';
 
-  <div class="center-image">
-    <img src="../assets/images/imagem_tela_1.png" alt="scene">
-  </div>
+    const container = document.getElementById('nextButton');
 
-  <div class="right-panel">
-    <div class="game-box">
-      <p>GAME</p>
-      <h3>RESIDENT EVIL</h3>
-      <span>DARK PROTOCOL</span>
-    </div>
+    container.innerHTML = createButton({
+      text: 'Assistir Trailer',
+      link: 'trailer.html'
+    });
+  </script>
 
-    <p class="description">
-      Antes de Leon S. Kennedy, um agente infiltrado entra em uma vila dominada
-      por um culto e pelo parasita Las Plagas. Descoberto, ele precisa sobreviver,
-      coletar provas e escapar — antes que seja tarde demais.
-    </p>
-
-    <button class="btn">
-      Watch trailer ➜
-    </button>
-  </div>
-
-</div>
+  <!-- efeitos -->
+  <script src="../scripts/effects/noise.js"></script>
 
 </body>
 </html>
