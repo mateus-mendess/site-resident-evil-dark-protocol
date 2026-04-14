@@ -1,0 +1,157 @@
+/* Container principal que ocupa a tela toda */
+.sobre-page-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Ajuste exclusivo da sidebar nesta página */
+.sobre-page-container .sidebar {
+    margin-left: 30px; /* 👈 Ajuste esse valor para mover mais ou menos */
+    z-index: 100; /* Mantém a sidebar acima de qualquer outro efeito da página */
+}
+
+/* Área de conteúdo à direita da sidebar */
+.sobre-content {
+    flex-grow: 1;
+    position: relative; /* Ativa contexto para o absoluto interno */
+    padding: 40px 5%;
+    overflow: hidden; /* Garante que o sangue não crie barras de rolagem estranhas */
+}
+
+/* --- ADIÇÃO EXCLUSIVA DO SANGUE --- */
+.sobre-content::before {
+    content: "";
+    position: absolute;
+    
+    /* 1. Posicionamento para o sangue descer de trás da imagem.
+       Ajustamos o top para bater com o topo da sua imagem e o right para bater com o margin da imagem. */
+    top: -50px; /* Ajuste para o sangue "bater" no topo e descer. */
+    right: 5%; /* Alinha com a borda direita da sua imagem. */
+    
+    /* 2. Tamanho da área de sangue.
+       Como a imagem tem max-width de 700px, vamos fazer o sangue cobrir uma área semelhante. */
+    width: 50vw; /* Largura grande para cobrir a área da imagem e descer. Ajuste conforme necessário. */
+    height: 100vh; /* Altura total da tela para o escorrimento longo. */
+    
+    /* 3. A imagem do sangue */
+    background-image: url('../../assets/images/img_sangue.png'); /* 👈 CAMINHO PARA O SEU PNG */
+    background-repeat: no-repeat;
+    background-position: top center; /* Ajusta onde o sangue começa a escorrer dentro da área */
+    background-size: contain; /* Ou 'cover' se quiser que ele preencha mais. */
+    
+    /* 4. Empilhamento: Atrás de tudo */
+    z-index: 0; /* Fica abaixo da imagem-wrapper (1) e do texto (padrão) */
+    
+    /* 5. Garante que não atrapalhe cliques */
+    pointer-events: none;
+    
+    /* Opcional: Adiciona um pouco de opacidade para não ficar muito agressivo */
+    opacity: 0.8; 
+}
+/* -------------------------------- */
+
+/* Header e Linha - MANTIDO INTACTO */
+.section-header {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 30px; 
+    z-index: 2; 
+}
+
+.section-header h1 {
+    text-transform: none;
+    font-family: var(--font-title);
+    letter-spacing: 2px;
+    font-size: 5rem;
+    color: #fff;
+    margin: 0;
+    padding-right: 20px; 
+}
+
+.section-header .line {
+    display: none; 
+}
+
+.section-header::before {
+    content: "";
+    position: absolute;
+    left: -10vw; 
+    right: 51.8%; 
+    height: 1px;
+    background: #fff;
+    z-index: -1; 
+}
+
+.subtitle-box {
+    background-color: #eee;
+    color: #000;
+    padding: 5px 15px;
+    margin-left: 30px;
+    display: inline-block;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.8rem;
+}
+
+/* IMAGEM: Canto Superior Direito - MANTIDO INTACTO */
+.imagem-wrapper {
+    position: absolute;
+    top: 0px;
+    right: 5%;
+    width: 60%; 
+    max-width: 700px;
+    z-index: 1; /* Mantém acima do sangue (0) */
+}
+
+.slider-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 4px solid #fff;
+    overflow: hidden;
+    background: #000;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active { opacity: 1; }
+
+.img-caption {
+    text-align: right;
+    margin-top: 8px;
+    font-family: var(--font-title);
+    color: #ccc;
+    letter-spacing: 2px;
+}
+
+/* TEXTO: Centro Inferior - MANTIDO INTACTO */
+.texto-wrapper {
+    position: absolute;
+    bottom: 50px;
+    left: 55%; 
+    transform: translateX(-50%); 
+    width: 80%;
+    max-width: 700px;
+    text-align: left; 
+    /* Como os parágrafos não têm z-index definido, eles ficam acima do sangue (0) automaticamente. */
+}
+
+.texto-wrapper p {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+}
