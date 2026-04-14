@@ -1,0 +1,16 @@
+/* ============================= */
+/* TEXT SHAKE EFFECT */
+/* ============================= */
+
+.shake-text {
+    display: inline-block;
+    animation: textShake 0.35s infinite;
+}
+
+@keyframes textShake {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(-0.5px, 0.5px); }
+    50%  { transform: translate(0.5px, -0.5px); }
+    75%  { transform: translate(-0.5px, 0); }
+    100% { transform: translate(0, 0); }
+}

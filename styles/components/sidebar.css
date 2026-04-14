@@ -1,7 +1,7 @@
 .menu-toggle {
     position: fixed;
     top: 40px;
-    left: 40px;
+    left: var(--ui-left);
 
     width: 45px;
 
@@ -72,11 +72,33 @@
 }
 
 .sidebar li::before {
-    content: "•";
-    color: var(--accent-red);
+    content: "";
     position: absolute;
-    left: -20px;
-    font-size: 28px;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-red);
+    box-shadow: 0 0 6px var(--accent-red);
+}
+
+.sidebar li::after {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--accent-red);
+    opacity: 1;
+
+    animation: sonarPulse 1.6s infinite;
 }
 
 .sidebar a {
@@ -93,4 +115,19 @@
 .sidebar a.active {
     color: var(--main-text);
     text-decoration: none;
+}
+
+@keyframes sonarPulse {
+    0% {
+        transform: translateY(-50%) scale(1);
+        opacity: 0.8;
+    }
+    70% {
+        transform: translateY(-50%) scale(2.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-50%) scale(2.8);
+        opacity: 0;
+    }
 }

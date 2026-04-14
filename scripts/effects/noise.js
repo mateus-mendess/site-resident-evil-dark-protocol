@@ -18,7 +18,7 @@ if (canvas) {
     const buffer = new Uint32Array(imageData.data.buffer);
 
     for (let i = 0; i < buffer.length; i++) {
-      if (Math.random() > 0.12) continue;
+      if (Math.random() > 0.30) continue;
 
       const color = (Math.random() * 255) | 0;
       const alpha = 250;
@@ -28,8 +28,8 @@ if (canvas) {
 
     ctx.putImageData(imageData, 0, 0);
 
-    if (Math.random() < 0.15) {
-      const drops = Math.random() * 20 + 10;
+    if (Math.random() < 0.50) {
+      const drops = Math.random() * 40 + 20;
 
       for (let i = 0; i < drops; i++) {
         const x = Math.random() * canvas.width;

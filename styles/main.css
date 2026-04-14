@@ -13,3 +13,5 @@
 
 /*BUTTON*/
 @import url("./components/button.css");
+
+@import url("./global/effects.css")
