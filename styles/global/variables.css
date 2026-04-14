@@ -14,6 +14,7 @@
 
 :root {
     --font-title: 'Special Elite', monospace;
+    --font-sub-title: 'Oswald';
     --bg-color: #0c0c0c;
     --main-text: #e0e0e0;
     --accent-red: #da0012;

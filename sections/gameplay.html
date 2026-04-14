@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameplay - Shadow Protocol</title>
+
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/pages/gameplay.css">
+</head>
+
+<body class="gameplay-page">
+    <canvas id="noise"></canvas>
+
+    <!-- SIDEBAR GLOBAL -->
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#home" data-page="home">Início</a></li>
+            <li><a href="#trailer" data-page="trailer">Trailer</a></li>
+            <li><a href="#sobre" data-page="sobre">Sobre</a></li>
+            <li><a href="#gameplay" data-page="gameplay">Gameplay</a></li>
+            <li><a href="#baixar" data-page="baixar">Baixar</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-layout">
+
+        <!-- HEADER -->
+        <header class="section-header">
+            <h1 class="main-title">Gameplay</h1>
+            <div class="line-decorator"></div>
+        </header>
+
+        <!-- BLOCO 1 -->
+        <section class="gameplay-section">
+            <div class="text-block">
+                <h2 class="sub-title-boxed">Perspectiva Side View</h2>
+
+                <p class="description-text">
+                    A perspectiva da câmera é em side view, posicionada lateralmente para acompanhar o personagem ao longo do cenário. Essa abordagem destaca a movimentação horizontal e a precisão dos saltos e ações, criando uma experiência mais direta e focada na jogabilidade.
+                </p>
+            </div>
+
+            <div class="image-wrapper">
+                <img src="../assets/images/imagem_tela_4.png" alt="Ação" class="img-frame">
+            </div>
+        </section>
+
+        <!-- BLOCO 2 -->
+        <section class="gameplay-section section-reverse">
+            <div class="image-wrapper">
+                <img src="../assets/images/maleta.png" alt="Inventário" class="img-frame">
+            </div>
+
+            <div class="text-block text-right">
+                <h2 class="sub-title-boxed">Gestão de Recursos</h2>
+
+                <p class="description-text">
+                    A mala permite armazenar armas, munições e itens essenciais para a sobrevivência.
+                    O gerenciamento eficiente do espaço limitado é fundamental para enfrentar os desafios ao longo do jogo.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SCRIPTS -->
+    <script type="module">
+        import { initSidebar } from '/scripts/components/sidebar.js';
+        initSidebar();
+    </script>
+
+    <script src="../scripts/effects/noise.js"></script>
+
+</body>
+</html>
