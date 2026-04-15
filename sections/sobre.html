@@ -1,82 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resident Evil - Sobre</title>
-
-  <link rel="stylesheet" href="../styles/main.css">
-  <link rel="stylesheet" href="../styles/pages/sobre.css">
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
-
-<body>
-  <canvas id="noise"></canvas>
-
-  <main class="sobre-page-container">
+<div class="sobre-page-container">
+  <section class="sobre-content">
     
-    <nav class="sidebar">
-        <ul>
-            <li><a href="#home" data-page="home">Início</a></li>
-            <li><a href="#trailer" data-page="trailer">Trailer</a></li>
-            <li><a href="#sobre" data-page="sobre">Sobre</a></li>
-            <li><a href="#gameplay" data-page="gameplay">Gameplay</a></li>
-            <li><a href="#baixar" data-page="baixar">Baixar</a></li>
-        </ul>
-    </nav>
+    <header class="section-header">
+      <h1 class="glitch-text shake-text">Sobre</h1>
+      <div class="line"></div>
+    </header>
 
-    <section class="sobre-content">
-      
-      <header class="section-header">
-        <h1>Sobre</h1>
-        <div class="line"></div>
-      </header>
+    <div class="subtitle-box">
+      Uma história nunca contada.
+    </div>
 
-      <div class="subtitle-box">
-        Uma história nunca contada.
+    <div class="imagem-wrapper">
+      <div class="slider-container">
+        <img src="./assets/images/imagem_tela_3.png" class="slide active" alt="Cena 1">
+        <img src="./assets/images/imagem_tela_4.png" class="slide" alt="Cena 2">
+        <img src="./assets/images/imagem_tela_1.png" class="slide" alt="Cena 3">
       </div>
+      <p class="img-caption">IMAGES 1 - 2 - 3</p>
+    </div>
 
-      <div class="imagem-wrapper">
-        <div class="slider-container">
-          <img src="../assets/images/imagem_tela_3.png" class="slide active">
-          <img src="../assets/images/imagem_tela_4.png" class="slide">
-          <img src="../assets/images/imagem_tela_1.png" class="slide">
-        </div>
-        <p class="img-caption">IMAGES 1 - 2 - 3</p>
-      </div>
+    <div class="texto-wrapper">
+      <p class="with-date">
+        <span class="date">1944.</span>
+          Enquanto os Aliados avançam pela Europa ocupada, rumores sobre uma “arma milagrosa” 
+          alemã levam a inteligência britânica a enviar um agente às profundezas da Baviera, 
+          onde um vilarejo isolado esconde experimentos conduzidos por uma divisão dissidente da SS.
+      </p>
+      <p>Nas antigas minas de sal, um organismo ancestral foi descoberto — e agora soldados e civis 
+        estão sendo transformados em hospedeiros de uma infecção desconhecida, dando origem a criaturas que 
+        desafiam qualquer explicação científica.
+      </p>
+      <p>Preso atrás das linhas inimigas, cercado por horrores e sem qualquer apoio, o agente deve sobreviver, 
+        investigar o chamado “Projeto Niflheim” e impedir que essa ameaça seja liberada no mundo.
+      </p>
+    </div>
 
-      <div class="texto-wrapper">
-        <p>Antes dos eventos de Resident Evil 4, o agente Logan Hayes é enviado a uma vila isolada na Espanha para investigar rumores de experimentos biológicos envolvendo o parasita Las Plagas.</p>
-        <p>Ao chegar, ele descobre que a região está completamente dominada pelo culto Los Illuminados e que seus habitantes já não são mais os mesmos.</p>
-        <p>Preso em território hostil, Logan precisa sobreviver, reunir provas e escapar antes de se tornar mais uma vítima da infecção.</p>
-      </div>
-
-    </section>
-  </main>
-  <!-- Sidebar -->
-  <script type="module">
-    import { initSidebar } from '/scripts/components/sidebar.js';
-    initSidebar();
-  </script>
-
-  <!-- Slider -->
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-
-    function nextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
-
-    setInterval(nextSlide, 5000);
-  </script>
-
-  <!-- efeitos -->
-  <script src="../scripts/effects/noise.js"></script>
-
-  </body>
-</html>
+  </section>
+</div>

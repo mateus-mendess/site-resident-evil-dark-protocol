@@ -1,90 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resident Evil - Baixar</title>
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/pages/baixar.css">
-    
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
-<body>
-    <canvas id="noise"></canvas>
+<div class="baixar-page-container">
+  <div class="screen">
+    <header class="section-header">
+      <h1 class="page-title">Baixar</h1>
 
-    <nav class="sidebar">
-        <ul>
-            <li><a href="#home" data-page="home">Início</a></li>
-            <li><a href="#trailer" data-page="trailer">Trailer</a></li>
-            <li><a href="#sobre" data-page="sobre">Sobre</a></li>
-            <li><a href="#gameplay" data-page="gameplay">Gameplay</a></li>
-            <li><a href="#baixar" data-page="baixar">Baixar</a></li>
-        </ul>
-    </nav>
+      <div class="line"></div>
+      <div class="socials">
+        <span>FOLLOW US</span>
+        <span class="icon"><ion-icon name="logo-youtube"></ion-icon></span>
+        <span class="icon"><ion-icon name="logo-instagram"></ion-icon></span>
+      </div>
+    </header>
 
-    <main class="screen">
-        <header class="section-header">
-            <h1 class="page-title">Baixar</h1>
+    <div class="content-baixar">
+      <div class="game-title">
+        <img src="./assets/images/imagem_logo.png" alt="Resident Evil Dark Protocol" class="titulo-imagem">
+        <img src="./assets/images/simbolo.png" alt="Símbolo" class="simbolo-imagem">
+      </div>
 
-            <div class="line"></div>
-            <div class="socials">
-                <span>FOLLOW US</span>
-                <span class="icon"><ion-icon name="logo-youtube"></ion-icon></span>
-                <span class="icon"><ion-icon name="logo-instagram"></ion-icon></span>
-            </div>
-        </header>
-
-        <div class="content-baixar">
-            <div class="game-title">
-                <img src="../assets/images/imagem_logo.png" alt="Resident Evil Dark Protocol" class="titulo-imagem">
-                
-                <img src="../assets/images/simbolo.png" alt="Símbolo" class="simbolo-imagem">
-            </div>
-
-            <div class="download-area">
-                <div class="platforms">
-                    <ion-icon name="logo-playstation"></ion-icon>
-                    <ion-icon name="logo-xbox"></ion-icon>
-                    <ion-icon name="logo-steam"></ion-icon>
-                </div>
-
-                <footer class="footer-action" id="downloadButton"></footer>
-            </div>
+      <div class="download-area">
+        <div class="platforms">
+          <ion-icon name="logo-playstation"></ion-icon>
+          <ion-icon name="logo-xbox"></ion-icon>
+          <ion-icon name="logo-steam"></ion-icon>
         </div>
 
-        <footer class="footer">
-            <div class="footer-left">
-                <img src="../assets/images/icone_time.png" alt="MGJ3 Logo" class="footer-logo">
-                <div class="footer-links">
-                    <a href="#">Terms</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Cookie Policy</a>
-                </div>
-            </div>
-            <div class="footer-right">
-                <p>All <span class="red-text">trademarks</span> referenced herein are the properties of their respective owners.</p>
-                <p><strong>MGJ3 UNIT INC.</strong></p>
-            </div>
-        </footer>
-    </main>
+        <div class="footer-action" id="downloadButton"></div>
+      </div>
+    </div>
 
-    <script type="module">
-    import { initSidebar } from '/scripts/components/sidebar.js';
-    initSidebar();
-    </script>
-
-    <script src="../scripts/effects/noise.js"></script>
-
-    <script type="module">
-    import { createButton } from '../scripts/components/button.js';
-
-    const container = document.getElementById('downloadButton');
-
-    container.innerHTML = createButton({
-        text: 'Baixar agora',
-        link: '#'
-    });
-    </script>
-</body>
-</html>
+    <footer class="footer">
+      <div class="footer-left">
+        <img src="./assets/images/icone_time.png" alt="MGJ3 Logo" class="footer-logo">
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p>All <span class="red-text">trademarks</span> referenced herein are the properties of their respective owners.</p>
+        <p><strong>MGJ3 UNIT INC.</strong></p>
+      </div>
+    </footer>
+  </div>
+</div>

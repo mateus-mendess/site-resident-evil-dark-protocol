@@ -1,29 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/main.css">
-    <title>Resident Evil Dark Protocol</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resident Evil - Dark Protocol</title>
+
+  <link rel="stylesheet" href="./styles/main.css">
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <canvas id="noise"></canvas>
-    <h1>Resident Evil Dark Protocol</h1>
+  <canvas id="noise"></canvas>
 
-    <nav class="sidebar">
-    <ul>
+  <div class="main-wrapper">
+
+    <button class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+      <small>MENU</small>
+    </button>
+
+    <div class="top-left"> 
+      <p><ion-icon name="globe-outline"></ion-icon> PT-BR</p> 
+    </div>
+
+    <nav class="sidebar" id="sidebar">
+      <ul>
         <li><a href="#home" data-page="home">Início</a></li>
         <li><a href="#trailer" data-page="trailer">Trailer</a></li>
         <li><a href="#sobre" data-page="sobre">Sobre</a></li>
         <li><a href="#gameplay" data-page="gameplay">Gameplay</a></li>
         <li><a href="#baixar" data-page="baixar">Baixar</a></li>
-    </ul>
-</nav>
+      </ul>
+    </nav>
 
-    <script src="/scripts/effects/noise.js"></script>
-    <script type="module">
-    import { initSidebar } from '/scripts/components/sidebar.js';
+    <div class="fixed-button-area">
+      <div class="btn-container" id="nextButton"></div>
+    </div>
+
+    <main class="sections-wrapper">
+      <section id="home" class="page-section"></section>
+      <section id="trailer" class="page-section"></section>
+      <section id="sobre" class="page-section"></section>
+      <section id="gameplay" class="page-section"></section>
+      <section id="baixar" class="page-section"></section>
+    </main>
+
+  </div>
+
+  <script type="module" src="./scripts/app.js"></script>
+  <script type="module">
+    import { initSidebar } from './scripts/components/sidebar.js';
     initSidebar();
-</script>
+  </script>
+
+  <script src="./scripts/effects/noise.js"></script>
+
+  <script type="module">
+    import { initTextGlitch } from './scripts/effects/textGlitch.js';
+    initTextGlitch();
+  </script>
 </body>
 </html>

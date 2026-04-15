@@ -1,111 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resident Evil - Dark Protocol</title>
+<div class="trailer-page-container">
+  <header class="header">
+    <h1 class="page-title glitch-text shake-text">Trailer</h1>
+  </header>
 
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/pages/trailer.css">
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
-
-<body>
-    <canvas id="noise"></canvas>
-
-    <div class="main-wrapper">
-        <div class="decorative-line"></div>
-        
-        <aside class="game-badge">
-            <div class="badge-game">GAME</div>
-            <div class="badge-title">RESIDENT EVIL</div>
-            <div class="badge-subtitle">DARK PROTOCOL</div>
-        </aside>
-
-        <header class="header">
-            <h1 class="page-title">Trailer</h1>
-        </header>
-
-        <main class="content-grid">
-
-            <!-- ✅ SIDEBAR PADRÃO (COMPONENTE) -->
-            <nav class="sidebar">
-                <ul>
-                    <li><a href="#home" data-page="home">Início</a></li>
-                    <li><a href="#trailer" data-page="trailer">Trailer</a></li>
-                    <li><a href="#sobre" data-page="sobre">Sobre</a></li>
-                    <li><a href="#gameplay" data-page="gameplay">Gameplay</a></li>
-                    <li><a href="#baixar" data-page="baixar">Baixar</a></li>
-                </ul>
-            </nav>
-
-            <div class="video-section">
-                <div class="video-player" id="videoContainer">
-                    <video id="mainVideo">
-                        <source src="../assets/images/video.mp4" type="video/mp4">
-                    </video>
-
-                    <div class="video-overlay" id="videoOverlay">
-                        <div class="esrb-box">
-                            <div class="esrb-top">
-                                MAY CONTAIN CONTENT<br>INAPPROPRIATE FOR CHILDREN
-                            </div>
-                            <div class="esrb-bottom">
-                                Visit www.esrb.org<br>for rating information
-                            </div>
-                        </div>
-                        <div class="play-icon-center"></div>
-                    </div>
-
-                    <div class="play-icon-small"></div>
-                </div>
-            </div>
-
-            <div class="blood-container">
-                <img src="../assets/images/img_sangue.png"
-                     alt="Blood Splatter"
-                     class="blood-img">
-            </div>
-
-        </main>
-
-        <footer class="footer-action" id="nextButton"></footer>
+  <div class="content-grid">
+    <div class="trailer-media-section">
+      <a
+        href="https://www.youtube.com/watch?v=SEU_VIDEO_AQUI"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="trailer-link"
+      >
+        <div class="trailer-image-wrapper">
+          <img
+            src="./assets/images/capa_video_trailer.png"
+            alt="Trailer de Resident Evil Dark Protocol"
+            class="trailer-image"
+          >
+        </div>
+      </a>
     </div>
-
-    <!-- ✅ SCRIPT SIDEBAR (IMPORTANTE) -->
-    <script type="module">
-        import { initSidebar } from '/scripts/components/sidebar.js';
-        initSidebar();
-    </script>
-
-    <!-- efeitos -->
-    <script src="../scripts/effects/noise.js"></script>
-
-    <!-- Sidebar -->
-    <script>
-        const video = document.getElementById('mainVideo');
-        const overlay = document.getElementById('videoOverlay');
-
-        overlay.addEventListener('click', () => {
-            overlay.style.opacity = '0';
-            setTimeout(() => overlay.style.display = 'none', 300);
-            video.play();
-            video.controls = true;
-        });
-    </script>
-
-    <!-- Button -->
-    <script type="module">
-    import { createButton } from '../scripts/components/button.js';
-
-    const container = document.getElementById('nextButton');
-
-    container.innerHTML = createButton({
-    text: 'Gameplay',
-    link: 'gameplay.html'
-    });
-    </script>
-</body>
-</html>
+  </div>
+</div>

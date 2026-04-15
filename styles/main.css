@@ -1,17 +1,81 @@
-/* GLOBAL */
 @import url("./global/reset.css");
 @import url("./global/variables.css");
-
-/*BACKGROUND*/
 @import url("./global/background.css");
+@import url("./global/effects.css");
 
-/*TYPOGRAPH*/
 @import url("./components/typography.css");
-
-/*SIDEBAR*/
 @import url("./components/sidebar.css");
-
-/*BUTTON*/
 @import url("./components/button.css");
 
-@import url("./global/effects.css")
+/* PAGES */
+@import url("./pages/home.css");
+@import url("./pages/trailer.css");
+@import url("./pages/sobre.css");
+@import url("./pages/gameplay.css");
+@import url("./pages/baixar.css");
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url("../assets/images/background.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--main-text);
+}
+
+.main-wrapper {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.sections-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.page-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.top-left {
+    position: fixed;
+    top: 40px;
+    right: 80px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.7;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+.top-left ion-icon {
+    font-size: 25px;
+    margin-top: -5px;
+}
+
+.top-left p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fixed-button-area {
+    position: fixed;
+    bottom: var(--ui-bottom);
+    left: var(--ui-left);
+    z-index: 2000;
+}
+
+.fixed-button-area .btn-container {
+    margin-top: 20px;
+}
+
+.footer-action {
+    position: static;
+}
