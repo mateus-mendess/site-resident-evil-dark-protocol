@@ -34,6 +34,7 @@ function initFixedButton() {
     buttonContainer.innerHTML = createButton({
       text: "Baixar",
       link: "#baixar",
+      icon: "arrow-forward-circle",
     });
   }
 }

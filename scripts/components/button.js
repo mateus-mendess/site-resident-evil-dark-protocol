@@ -1,10 +1,14 @@
-export function createButton({ text, link }) {
+export function createButton({ text, link, icon }) {
   return `
-        <a href="${link}" class="btn-next">
-            ${text}
-            <span class="arrow-icon">
-                <ion-icon name="arrow-forward-circle"></ion-icon>
-            </span>
-        </a>
-    `;
+    <a href="${link}" class="btn-next">
+      ${text}
+      ${
+        icon
+          ? `<span class="arrow-icon">
+               <ion-icon name="${icon}"></ion-icon>
+             </span>`
+          : ""
+      }
+    </a>
+  `;
 }
