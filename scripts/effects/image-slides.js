@@ -1,4 +1,4 @@
-export function initSobreSlider() {
+export function initImageSlider() {
   const sliders = document.querySelectorAll(".slider-container");
 
   if (!sliders.length) return;

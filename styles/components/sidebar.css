@@ -62,7 +62,7 @@
 }
 
 .sidebar ul {
-    padding-left: 20px;
+    padding-left: 38px;
     list-style: none;
 }
 
@@ -110,11 +110,6 @@
 
 .sidebar a:hover {
     color: var(--main-text);
-}
-
-.sidebar a.active {
-    color: var(--main-text);
-    text-decoration: none;
 }
 
 @keyframes sonarPulse {

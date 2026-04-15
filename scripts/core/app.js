@@ -1,6 +1,6 @@
-import { createButton } from "./components/button.js";
-import { initTextGlitch } from "./effects/textGlitch.js";
-import { initSobreSlider } from "./pages/sobre.js";
+import { createButton } from "../components/button.js";
+import { initTextGlitch } from "../effects/textGlitch.js";
+import { initImageSlider } from "../effects/image-slides.js";
 
 async function loadSection(sectionId, filePath) {
   const container = document.getElementById(sectionId);
@@ -19,14 +19,6 @@ async function loadSection(sectionId, filePath) {
 
     const html = await response.text();
     container.innerHTML = html;
-
-    if (sectionId === "sobre") {
-      initSobreSlider();
-    }
-
-    if (sectionId === "gameplay") {
-      initSobreSlider();
-    }
 
     initTextGlitch();
   } catch (error) {
@@ -51,7 +43,7 @@ function initDownloadButton() {
 
   if (buttonContainer) {
     buttonContainer.innerHTML = createButton({
-      text: "Baixar",
+      text: "Download",
       link: "#",
     });
   }
@@ -103,6 +95,7 @@ async function initApp() {
     loadSection("baixar", "./sections/baixar.html"),
   ]);
 
+  initImageSlider();
   initFixedButton();
   initDownloadButton();
   initButtonVisibility();
