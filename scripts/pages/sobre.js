@@ -1,15 +1,19 @@
 export function initSobreSlider() {
-  const slides = document.querySelectorAll(".sobre-page-container .slide");
+  const sliders = document.querySelectorAll(".slider-container");
 
-  if (!slides.length) return;
+  if (!sliders.length) return;
 
-  let current = 0;
+  sliders.forEach((slider) => {
+    const slides = slider.querySelectorAll(".slide");
 
-  setInterval(() => {
-    slides[current].classList.remove("active");
+    if (slides.length <= 1) return;
 
-    current = (current + 1) % slides.length;
+    let current = 0;
 
-    slides[current].classList.add("active");
-  }, 4000); // troca a cada 3 segundos
+    setInterval(() => {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }, 5000);
+  });
 }
