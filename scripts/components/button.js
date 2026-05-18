@@ -1,6 +1,11 @@
-export function createButton({ text, link, icon }) {
+export function createButton({ text, link, icon, target }) {
   return `
-    <a href="${link}" class="btn-next">
+    <a 
+      href="${link}" 
+      target="${target || "_self"}"
+      rel="noopener noreferrer"
+      class="btn-next"
+    >
       ${text}
       ${
         icon

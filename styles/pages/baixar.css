@@ -148,6 +148,14 @@
     opacity: 1;
 }
 
+.demo-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #cfcfcf;
+  letter-spacing: 1px;
+}
+
 /* botão download */
 .baixar-page-container .footer-action {
     margin-top: 10px;

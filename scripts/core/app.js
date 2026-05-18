@@ -45,7 +45,8 @@ function initDownloadButton() {
   if (buttonContainer) {
     buttonContainer.innerHTML = createButton({
       text: "Download",
-      link: "#",
+      link: "https://mendesitchio.itch.io/resident-evil-dark-protocol",
+      target: "_blank",
     });
   }
 }
